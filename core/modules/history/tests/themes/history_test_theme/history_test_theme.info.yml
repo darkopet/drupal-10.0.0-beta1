@@ -1,0 +1,10 @@
+name: 'History Test Theme'
+type: theme
+description: 'Theme for history tests.'
+# version: VERSION
+base theme: stark
+
+# Information added by Drupal.org packaging script on 2022-09-16
+version: '10.0.0-beta1'
+project: 'drupal'
+datestamp: 1663358079

@@ -1,0 +1,9 @@
+name: 'Config install dependency test'
+type: module
+package: Testing
+# version: VERSION
+
+# Information added by Drupal.org packaging script on 2022-09-16
+version: '10.0.0-beta1'
+project: 'drupal'
+datestamp: 1663358079
