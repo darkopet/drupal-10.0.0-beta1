@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "153ffb578f39cc8385cafd25bd9cfdc8",
+    "content-hash": "ec522604d59b3c514810ae80c506c64f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -440,11 +440,6 @@
         {
             "name": "drupal/core",
             "version": "10.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core.git",
-                "reference": "85d21c9eb311e4b8a1bea3611c6a400b85a37ffc"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core/zipball/85d21c9eb311e4b8a1bea3611c6a400b85a37ffc",
@@ -550,9 +545,6 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "includes/bootstrap.inc"
-                ],
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
                     "Drupal\\Component\\": "lib/Drupal/Component"
@@ -579,26 +571,29 @@
                     "lib/Drupal/Core/DrupalKernelInterface.php",
                     "lib/Drupal/Core/Installer/InstallerRedirectTrait.php",
                     "lib/Drupal/Core/Site/Settings.php"
+                ],
+                "files": [
+                    "includes/bootstrap.inc"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "pre-autoload-dump": [
+                    "Drupal\\Core\\Composer\\Composer::preAutoloadDump"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "support": {
-                "source": "https://github.com/drupal/core/tree/10.0.0-beta1"
-            },
-            "time": "2022-09-16T19:36:57+00:00"
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal/core.git",
+                "reference": "85d21c9eb311e4b8a1bea3611c6a400b85a37ffc"
+            }
         },
         {
             "name": "drupal/core-composer-scaffold",
             "version": "10.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "e3f17745ab88a919f5179e6d9c1ac8ce77d3845f"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/e3f17745ab88a919f5179e6d9c1ac8ce77d3845f",
@@ -627,7 +622,6 @@
                     "Drupal\\Composer\\Plugin\\Scaffold\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -636,19 +630,15 @@
             "keywords": [
                 "drupal"
             ],
-            "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.0.0-beta1"
-            },
-            "time": "2022-07-01T08:33:05+00:00"
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal/core-composer-scaffold.git",
+                "reference": "e3f17745ab88a919f5179e6d9c1ac8ce77d3845f"
+            }
         },
         {
             "name": "drupal/core-project-message",
             "version": "10.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "b4bb5b4c67242def27c2abf5892e5d9bfb7d08f1"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-project-message/zipball/b4bb5b4c67242def27c2abf5892e5d9bfb7d08f1",
@@ -668,7 +658,6 @@
                     "Drupal\\Composer\\Plugin\\ProjectMessage\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -677,19 +666,15 @@
             "keywords": [
                 "drupal"
             ],
-            "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/10.0.0-beta1"
-            },
-            "time": "2022-07-01T08:33:05+00:00"
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal/core-project-message.git",
+                "reference": "b4bb5b4c67242def27c2abf5892e5d9bfb7d08f1"
+            }
         },
         {
             "name": "drupal/core-recommended",
             "version": "10.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "958322d5f2740f85e966245ae576cc4d121763ca"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-recommended/zipball/958322d5f2740f85e966245ae576cc4d121763ca",
@@ -750,56 +735,15 @@
                 "webflo/drupal-core-strict": "*"
             },
             "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
-            "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.0.0-beta1"
-            },
-            "time": "2022-09-16T19:36:57+00:00"
-        },
-        {
-            "name": "drupal/core-vendor-hardening",
-            "version": "10.0.0-beta1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drupal/core-vendor-hardening.git",
-                "reference": "b625596080d3865811d8722bc6484ddf32746aba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/b625596080d3865811d8722bc6484ddf32746aba",
-                "reference": "b625596080d3865811d8722bc6484ddf32746aba",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^2",
-                "php": ">=7.3.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Drupal\\Composer\\Plugin\\VendorHardening\\VendorHardeningPlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\Composer\\Plugin\\VendorHardening\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Hardens the vendor directory for when it's in the docroot.",
-            "homepage": "https://www.drupal.org/project/drupal",
-            "keywords": [
-                "drupal"
-            ],
-            "support": {
-                "source": "https://github.com/drupal/core-vendor-hardening/tree/10.0.0-beta1"
-            },
-            "time": "2022-09-02T08:09:36+00:00"
+                "url": "https://github.com/drupal/core-recommended.git",
+                "reference": "958322d5f2740f85e966245ae576cc4d121763ca"
+            }
         },
         {
             "name": "egulias/email-validator",
@@ -4186,5 +4130,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.1.0"
+    },
     "plugin-api-version": "2.3.0"
 }
